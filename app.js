@@ -10,7 +10,7 @@ sign_in_btn.addEventListener("click", () => {
   container.classList.remove("sign-up-mode");
 });
 const validCredentials = [
-  { username: "lencerseje@.ac.ke", password: "001" },
+  { username: "oduor", password: "01" },
   { username: "user2", password: "password2" },
   { username: "user3", password: "password3" },
   { username: "calvin@ictjamilo", password: "02" },
@@ -32,7 +32,7 @@ loginForm.addEventListener("submit", (event) => {
   );
 
   if (isValidCredential) {
-    window.location.href = "D:https:\\www.google.com";
+    window.location.href = "https://jamilo-school.github.io/Academicsnew/";
   } else {
     alert("🎯Access denied you are trying to use anauthorized credentials.Please check and try again or contact the I.C.T department for validation");
   }
