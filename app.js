@@ -34,6 +34,6 @@ loginForm.addEventListener("submit", (event) => {
   if (isValidCredential) {
     window.location.href = "https://jamilo-school.github.io/Academicsnew/";
   } else {
-    alert("🎯Access denied you are trying to use anauthorized credentials.Please check and try again or contact the I.C.T department for validation");
+    alert("🎯Access denied you are trying to use unauthorized credentials.Please check and try again or contact the I.C.T department for validation");
   }
 });
