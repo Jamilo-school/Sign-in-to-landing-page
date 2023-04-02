@@ -33,16 +33,25 @@ loginForm.addEventListener("submit", (event) => {
 
   if (isValidCredential) {
     const currentDate = new Date();
+    const currentDay = new Intl.DateTimeFormat('en-US', {weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'}).format(currentDate);
     const currentTime = currentDate.toLocaleTimeString();
-    const currentDay = currentDate.toLocaleDateString();
     const name = isValidCredential.name;
     const subjects = isValidCredential.subjects.join(", ");
+    let location;
 
-    const greeting = `Welcome ${name}! Today is ${currentDay}, and the current time is ${currentTime}. You teach ${subjects}.`;
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const latitude = position.coords.latitude.toFixed(2);
+        const longitude = position.coords.longitude.toFixed(2);
+        location = `Your current location is (${latitude}, ${longitude})`;
+      });
+    }
+
+    const greeting = `${currentDay}, ${currentTime}. Welcome ${name}! Teacher of ${subjects}. ${location ? location : ''} Jamilo School`;
+
     alert(greeting);
-
     window.location.href = "https://jamilo-school.github.io/Academicsnew/";
   } else {
-    alert("🎯Access denied you are trying to use unauthorized credentials. Please check and try again or contact the I.C.T department for validation.");
+    alert("🎯 Access denied! You are trying to use unauthorized credentials. Please check and try again or contact the I.C.T department for validation.");
   }
 });
