@@ -38,7 +38,7 @@ loginForm.addEventListener("submit", (event) => {
     const name = isValidCredential.name;
     const subjects = isValidCredential.subjects.join(", ");
 
-    const greeting = `Today is ${currentDay}, and the current time is ${currentTime}. Welcome ${name}! You teach ${subjects}.`;
+    const greeting = `Date${currentDay},current time is ${currentTime}. User${name}! Teacher of ${subjects}.`;
     alert(greeting);
 
     window.location.href = "https://jamilo-school.github.io/Academicsnew/";
