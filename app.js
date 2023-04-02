@@ -38,8 +38,18 @@ loginForm.addEventListener("submit", (event) => {
     const name = isValidCredential.name;
     const subjects = isValidCredential.subjects.join(", ");
 
-    const greeting = `Date${currentDay},current time is ${currentTime}. User${name}! Teacher of ${subjects}.`;
-    alert(greeting);
+    const greeting = `Today is ${currentDay}, and the current time is ${currentTime}. Welcome ${name}! You teach ${subjects}.`;
+    
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const latitude = position.coords.latitude.toFixed(2);
+        const longitude = position.coords.longitude.toFixed(2);
+        const location = `Your current location is (${latitude}, ${longitude})`;
+        alert(`${greeting}\n${location}`);
+      });
+    } else {
+      alert(greeting);
+    }
 
     window.location.href = "https://jamilo-school.github.io/Academicsnew/";
   } else {
