@@ -37,29 +37,11 @@ loginForm.addEventListener("submit", (event) => {
     const currentTime = currentDate.toLocaleTimeString();
     const name = isValidCredential.name;
     const subjects = isValidCredential.subjects.join(", ");
-    let location;
-    let ipAddress;
 
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        const latitude = position.coords.latitude.toFixed(2);
-        const longitude = position.coords.longitude.toFixed(2);
-        location = `Your current location is (${latitude}, ${longitude})`;
-      });
-    }
+    const greeting = `Today is ${currentDay}, and the current time is ${currentTime}. Welcome ${name}! You teach ${subjects}.`;
+    alert(greeting);
 
-    fetch("https://api.ipify.org/?format=json")
-      .then((response) => response.json())
-      .then((data) => {
-        ipAddress = `Your IP address is ${data.ip}`;
-      });
-
-    const greeting = `Today is ${currentDay}, and the current time is ${currentTime}. Welcome ${name}! You teach ${subjects}. ${location ? location : ''} ${ipAddress ? ipAddress : ''}`;
-
-    setTimeout(() => {
-      alert(greeting);
-      window.location.href = "https://jamilo-school.github.io/Academicsnew/";
-    }, 10000);
+    window.location.href = "https://jamilo-school.github.io/Academicsnew/";
   } else {
     alert("🎯Access denied you are trying to use unauthorized credentials. Please check and try again or contact the I.C.T department for validation.");
   }
