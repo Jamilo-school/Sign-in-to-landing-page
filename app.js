@@ -9,11 +9,12 @@ sign_up_btn.addEventListener("click", () => {
 sign_in_btn.addEventListener("click", () => {
   container.classList.remove("sign-up-mode");
 });
+
 const validCredentials = [
-  { username: "oduor", password: "01" },
-  { username: "user2", password: "password2" },
-  { username: "user3", password: "password3" },
-  { username: "calvin@ictjamilo", password: "02" },
+  { username: "oduor", password: "01", name: "John Oduor", subjects: ["Mathematics", "Science"] },
+  { username: "user2", password: "password2", name: "Jane Doe", subjects: ["English", "History"] },
+  { username: "user3", password: "password3", name: "David Smith", subjects: ["Geography", "Physics"] },
+  { username: "calvin@ictjamilo", password: "02", name: "Calvin Muthoni", subjects: ["Biology", "Chemistry"] },
 ];
 
 const loginForm = document.querySelector(".sign-in-form");
@@ -26,14 +27,40 @@ loginForm.addEventListener("submit", (event) => {
   const username = usernameInput.value;
   const password = passwordInput.value;
 
-  const isValidCredential = validCredentials.some(
-    (credential) =>
-      credential.username === username && credential.password === password
+  const isValidCredential = validCredentials.find(
+    (credential) => credential.username === username && credential.password === password
   );
 
   if (isValidCredential) {
-    window.location.href = "https://jamilo-school.github.io/Academicsnew/";
+    const currentDate = new Date();
+    const currentDay = currentDate.toLocaleDateString();
+    const currentTime = currentDate.toLocaleTimeString();
+    const name = isValidCredential.name;
+    const subjects = isValidCredential.subjects.join(", ");
+    let location;
+    let ipAddress;
+
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const latitude = position.coords.latitude.toFixed(2);
+        const longitude = position.coords.longitude.toFixed(2);
+        location = `Your current location is (${latitude}, ${longitude})`;
+      });
+    }
+
+    fetch("https://api.ipify.org/?format=json")
+      .then((response) => response.json())
+      .then((data) => {
+        ipAddress = `Your IP address is ${data.ip}`;
+      });
+
+    const greeting = `Today is ${currentDay}, and the current time is ${currentTime}. Welcome ${name}! You teach ${subjects}. ${location ? location : ''} ${ipAddress ? ipAddress : ''}`;
+
+    setTimeout(() => {
+      alert(greeting);
+      window.location.href = "https://jamilo-school.github.io/Academicsnew/";
+    }, 30000);
   } else {
-    alert("🎯Access denied you are trying to use unauthorized credentials.Please check and try again or contact the I.C.T department for validation");
+    alert("🎯Access denied you are trying to use unauthorized credentials. Please check and try again or contact the I.C.T department for validation.");
   }
 });
