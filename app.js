@@ -59,7 +59,7 @@ loginForm.addEventListener("submit", (event) => {
     setTimeout(() => {
       alert(greeting);
       window.location.href = "https://jamilo-school.github.io/Academicsnew/";
-    }, 30000);
+    }, 10000);
   } else {
     alert("🎯Access denied you are trying to use unauthorized credentials. Please check and try again or contact the I.C.T department for validation.");
   }
