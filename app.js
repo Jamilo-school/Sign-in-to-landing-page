@@ -33,23 +33,13 @@ loginForm.addEventListener("submit", (event) => {
 
   if (isValidCredential) {
     const currentDate = new Date();
-    const currentDay = currentDate.toLocaleDateString();
     const currentTime = currentDate.toLocaleTimeString();
+    const currentDay = currentDate.toLocaleDateString();
     const name = isValidCredential.name;
     const subjects = isValidCredential.subjects.join(", ");
 
-    const greeting = `Today is ${currentDay}, and the current time is ${currentTime}. Welcome ${name}! You teach ${subjects}.`;
-    
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        const latitude = position.coords.latitude.toFixed(2);
-        const longitude = position.coords.longitude.toFixed(2);
-        const location = `Your current location is (${latitude}, ${longitude})`;
-        alert(`${greeting}\n${location}`);
-      });
-    } else {
-      alert(greeting);
-    }
+    const greeting = `Welcome ${name}! Today is ${currentDay}, and the current time is ${currentTime}. You teach ${subjects}.`;
+    alert(greeting);
 
     window.location.href = "https://jamilo-school.github.io/Academicsnew/";
   } else {
