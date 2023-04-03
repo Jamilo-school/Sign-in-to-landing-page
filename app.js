@@ -11,7 +11,7 @@ sign_in_btn.addEventListener("click", () => {
 });
 
 const validCredentials = [
-  { username: "geofreyonyango167@gmail.com", password: "montanaio", name: "Lecturer  Oduor", subjects: ["Mathematics", "Science"] },
+  { username: "geofreyonyango167@gmail.com", password: "montanaio", name: "Mr Oduor", subjects: ["Mathematics", "Science"] },
   { username: "lencer07achieng@gmail.com", password: "233387882", name: "Madam Lencer Seje", subjects: ["English", "Mathematics"] },
   { username: "user3", password: "password3", name: "David Smith", subjects: ["Geography", "Physics"] },
   { username: "calvin@ictjamilo", password: "02", name: "Calvin Muthoni", subjects: ["Biology", "Chemistry"] },
@@ -52,6 +52,7 @@ loginForm.addEventListener("submit", (event) => {
     alert(greeting);
     window.location.href = "https://jamilo-school.github.io/Academicsnew/";
   } else {
-    alert("🎯 Access denied! You are trying to use unauthorized credentials. Please check and try again or contact the I.C.T department for validation.");
+    alert("🎯 Access denied! You are trying to use unauthorized credentials. Please check and try again ");
   }
 });
+//end of javascript code//
