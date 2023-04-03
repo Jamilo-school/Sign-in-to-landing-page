@@ -12,7 +12,7 @@ sign_in_btn.addEventListener("click", () => {
 
 const validCredentials = [
   { username: "oduor", password: "01", name: "John Oduor", subjects: ["Mathematics", "Science"] },
-  { username: "user2", password: "password2", name: "Jane Doe", subjects: ["English", "History"] },
+  { username: "lencer07achieng@gmail.com", password: "233387882", name: "Madam Lencer Seje", subjects: ["English", "Mathematics"] },
   { username: "user3", password: "password3", name: "David Smith", subjects: ["Geography", "Physics"] },
   { username: "calvin@ictjamilo", password: "02", name: "Calvin Muthoni", subjects: ["Biology", "Chemistry"] },
 ];
