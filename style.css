@@ -1119,11 +1119,12 @@ container {
 }
 
 #wifi-loader .text::before, #wifi-loader .text::after {
-  content: attr(data-text);
+  content: attr(data-text);  
 }
 
 #wifi-loader .text::before {
   color: var(--text-color);
+
 }
 
 #wifi-loader .text::after {
@@ -1132,6 +1133,7 @@ container {
           animation: text-animation76 3.6s ease infinite;
   position: absolute;
   left: 0;
+ 
 }
 
 @-webkit-keyframes circle-outer135 {
@@ -1272,5 +1274,5 @@ container {
             clip-path: inset(0 100% 0 0);
   }
 
-  5
+}
 /* searching ends///////////////////////////////////// */
