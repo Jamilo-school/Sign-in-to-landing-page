@@ -1280,7 +1280,7 @@ container {
   display: block;
  --height-of-loader: 4px;
  --loader-color: #fff;
- width: 130px;
+ width: 100px;
  height: var(--height-of-loader);
  border-radius: 30px;
  background-color: rgba(0,0,0,0.2);
