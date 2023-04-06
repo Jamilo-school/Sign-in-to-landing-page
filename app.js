@@ -13,8 +13,11 @@ sign_in_btn.addEventListener("click", () => {
 const validCredentials = [
   { username: "geofreyonyango167@gmail.com", password: "montanaio", name: "Mr Oduor", subjects: ["Mathematics", "Science"] },
   { username: "lencer07achieng@gmail.com", password: "233387882", name: "Madam Lencer Seje", subjects: ["English", "Mathematics"] },
-  { username: "user3", password: "password3", name: "David Smith", subjects: ["Geography", "Physics"] },
-  { username: "calvin@ictjamilo", password: "02", name: "Calvin Muthoni", subjects: ["Biology", "Chemistry"] },
+  { username: " tresa@jamiloschool", password: "ict692k", name: "David Smith", subjects: ["Mathematics", "Kiswahili"] },
+  { username: "calvin@jamiloschool", password: "ict46892x", name: "Deputy Headteacher Calvin Ochieng", subjects: ["science", "music"] },
+  { username: "jumba@jamiloschool", password: "s67299y", name: "Clarance Jumba", subjects: ["agriculture", "Art/craft"] },
+  { username: "nancy@jamiloschool", password: "8299y", name: "Nancy Atieno", subjects: ["music", "Drama"] },
+  { username: "caren@jamiloschool", password: "s67299y", name: "Clarance Jumba", subjects: ["agriculture", "Art/craft"] },
 ];
 
 const loginForm = document.querySelector(".sign-in-form");
