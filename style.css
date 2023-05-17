@@ -12,6 +12,15 @@ h2,h3,h4{
   -webkit-text-fill-color: transparent;
 
 }
+p{
+  color: #fff;
+  
+}
+
+
+h4{
+  font-size: 2rem;
+}
 
 
 
@@ -179,6 +188,7 @@ form.sign-in-form {
   cursor: pointer;
   transition: 0.5s;
   border: 2px solid;
+  box-shadow: 5px 5px 5px red;
 }
 
 .btn:hover {
@@ -254,10 +264,12 @@ form.sign-in-form {
   margin: 0;
   background: none;
   border: 2px solid #fff;
+  background: linear-gradient(45deg,#87adfe,#ff77cd);
   width: 130px;
   height: 41px;
   font-weight: 600;
   font-size: 0.8rem;
+  box-shadow: 5px 5px 5px red;
 }
 
 .right-panel .image,
