@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-h2,h3,h4{
+h2,h3{
   background: linear-gradient(45deg,#87adfe,#ff77cd,rgba(27, 13, 56, 0.467));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -133,10 +133,11 @@ form.sign-in-form {
   line-height: 1;
   font-weight: 600;
   font-size: 1.1rem;
-  background: linear-gradient(45deg,#0a4ee1,#eb1d9f,rgba(27, 13, 56, 0.467));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+ color: lemonchiffon;
+  
+  
 }
+
 
 .input-field input::placeholder {
   color: #aaa;
