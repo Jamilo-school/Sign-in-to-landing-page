@@ -6,24 +6,6 @@
   box-sizing: border-box;
 }
 
-h2,h3{
-  background: linear-gradient(45deg,#87adfe,#ff77cd,rgba(27, 13, 56, 0.467));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-}
-p{
-  color: #fff;
-  
-}
-
-
-h4{
-  font-size: 2rem;
-}
-
-
-
 body,
 input {
   font-family: "Poppins", sans-serif;
@@ -133,11 +115,8 @@ form.sign-in-form {
   line-height: 1;
   font-weight: 600;
   font-size: 1.1rem;
- color: lemonchiffon;
-  
-  
+  color: #333;
 }
-
 
 .input-field input::placeholder {
   color: #aaa;
@@ -177,7 +156,7 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-  background: linear-gradient(45deg,#87adfe,#ff77cd);
+  background-color: #5995fd;
   border: none;
   outline: none;
   height: 49px;
@@ -188,12 +167,10 @@ form.sign-in-form {
   margin: 10px 0;
   cursor: pointer;
   transition: 0.5s;
-  border: 2px solid;
-  box-shadow: 5px 5px 5px red;
 }
 
 .btn:hover {
-  color:lemonchiffon;
+  background-color: #4d84e2;
 }
 .panels-container {
   position: absolute;
@@ -213,7 +190,7 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-color: #4481eb;
+  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -265,12 +242,10 @@ form.sign-in-form {
   margin: 0;
   background: none;
   border: 2px solid #fff;
-  background: linear-gradient(45deg,#87adfe,#ff77cd);
   width: 130px;
   height: 41px;
   font-weight: 600;
   font-size: 0.8rem;
-  box-shadow: 5px 5px 5px red;
 }
 
 .right-panel .image,
@@ -315,6 +290,11 @@ form.sign-in-form {
 
 .container.sign-up-mode .right-panel {
   pointer-events: all;
+}
+
+marquee{
+  background-color: white;
+  color: rgb(22, 220, 213);
 }
 /* //////////////////////////////////////////////////////////// */
 
@@ -364,7 +344,7 @@ container {
   width: 45px;
   height: 45px;
   border-radius: 50% 50% 50% 0%;
-  background-color: #fff;
+  background-color: #4c9beb;
   display: inline-block;
   margin-left: -25px;
   z-index: 5;
@@ -374,7 +354,7 @@ container {
   width: 65px;
   height: 65px;
   border-radius: 50% 50% 0% 50%;
-  background-color: #fff;
+  background-color: #4c9beb;
   display: inline-block;
   z-index: 5;
 }
@@ -383,7 +363,7 @@ container {
   width: 50px;
   height: 50px;
   border-radius: 50% 50% 50% 0%;
-  background-color: #fff;
+  background-color: #4c9beb;
   display: inline-block;
   margin-left: -20px;
   z-index: 5;
@@ -393,7 +373,7 @@ container {
   width: 30px;
   height: 30px;
   border-radius: 50% 50% 0% 50%;
-  background-color: #fff;
+  background-color: #4c9beb;
   display: inline-block;
   z-index: 5;
 }
@@ -479,7 +459,7 @@ container {
 /* ///////////////////////////////////////////////////////////////// */
 
 .typewriter {
-  --blue: #ff77cd;
+  --blue: #5C86FF;
   --blue-dark: #275EFE;
   --key: #fff;
   --paper: #EEF0FD;
