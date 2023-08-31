@@ -18,6 +18,7 @@ const validCredentials = [
   { username: "jumba@jamiloschool", password: "s67299y", name: "Clarance Jumba", subjects: ["agriculture", "Art/craft"] },
   { username: "nancy@jamiloschool", password: "8299y", name: "Nancy Atieno", subjects: ["music", "Drama"] },
   { username: "director@jamiloschool", password: "G967785", name: "Director Lilian Omollo",subjects: [""] },
+  { username: "director@jamiloschool", password: "G##56", name: "Director Gerald Omollo",subjects: [""]},
   { username: "caren@jamiloschool", password: "z299y", name: "Clarance Jumba", subjects: [" and trainer of Drama", "social culture"] },
 ];
 
@@ -36,22 +37,10 @@ loginForm.addEventListener("submit", (event) => {
   );
 
   if (isValidCredential) {
-    const currentDate = new Date();
-    const currentDay = new Intl.DateTimeFormat('en-US', {weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'}).format(currentDate);
-    const currentTime = currentDate.toLocaleTimeString();
     const name = isValidCredential.name;
     const subjects = isValidCredential.subjects.join(", ");
-    let location;
-
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        const latitude = position.coords.latitude.toFixed(2);
-        const longitude = position.coords.longitude.toFixed(2);
-        location = `Your current location is (${latitude}, ${longitude})`;
-      });
-    }
-
-    const greeting = `${currentDay}, ${currentTime}. Welcome ${name}! Teacher of ${subjects}. ${location ? location : ''} Jamilo School`;
+    
+    const greeting = `🧑‍⚕️ Welcome ${name} ${subjects}. `;
 
     alert(greeting);
     window.location.href = "https://jamilo-school.github.io/Main-page/";
