@@ -43,7 +43,7 @@ loginForm.addEventListener("submit", (event) => {
     const greeting = `🧑‍⚕️ Welcome ${name} ${subjects}. `;
 
     alert(greeting);
-    window.location.href = "https://jamilo-school.github.io/Main-page/";
+    window.location.href = "https://jamilo-school.github.io/landing-page/";
   } else {
     alert("🎯 Access denied! You are trying to use unauthorized credentials. Please check and try again ");
   }
