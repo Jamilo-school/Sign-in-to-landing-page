@@ -11,7 +11,7 @@ sign_in_btn.addEventListener("click", () => {
 });
 
 const validCredentials = [
-  { username: "geofreyonyango167@gmail.com", password: "montanaio", name: "Mr Oduor", subjects: ["Mathematics", "Science"] },
+  { username: "geofreyonyango167@gmail.com", password: "montanaio", name: "Mr Oduor Geofrey Onyango", subjects: ["Mathematics", "Science"] },
   { username: "lencer07achieng@gmail.com", password: "33387882", name: "Madam Lencer Seje", subjects: ["English", "Mathematics"] },
   { username: " tresa@jamiloschool", password: "ict692k", name: "David Smith", subjects: ["Mathematics", "Kiswahili"] },
   { username: "calvin@jamiloschool", password: "ict46892x", name: "Deputy Headteacher Calvin Ochieng", subjects: ["science", "music"] },
