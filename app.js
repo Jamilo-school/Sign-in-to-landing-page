@@ -20,6 +20,7 @@ const validCredentials = [
   { username: "director@jamiloschool", password: "G967785", name: "Director Lilian Omollo",subjects: [""] },
   { username: "director@jamiloschool", password: "G##56", name: "Director Gerald Omollo",subjects: [""]},
   { username: "caren@jamiloschool", password: "z299y", name: "Clarance Jumba", subjects: [" and trainer of Drama", "social culture"] },
+  { username: "mwasame@jamiloschool", password: "gnome", name: "Madam Mwasame Juliet ", subjects: ["Social sciences", "Peer conselor"] },
 ];
 
 const loginForm = document.querySelector(".sign-in-form");
