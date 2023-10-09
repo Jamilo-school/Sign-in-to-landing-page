@@ -10,6 +10,51 @@ body,
 input {
   font-family: "Poppins", sans-serif;
 }
+/* Styling for the popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.popup-close {
+    position: absolute;
+    top: -30px;
+    right: -8px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fe27f3;
+}
+
+.popup-message {
+    margin: 20px 0;
+}
+
+/* Styling for success and access denied messages */
+.success {
+  background-image: linear-gradient(-45deg, #cfb150 0%, #0432fe 100%);
+  font-family: monospace;
+}
+
+.access-denied {
+    background-image: linear-gradient(-45deg, #a95d5d 0%, #fe0453 100%);
+    font-family: monospace;
+}
+/* ////////////////////////// */
 .logo{
   width: 170px;
 }
