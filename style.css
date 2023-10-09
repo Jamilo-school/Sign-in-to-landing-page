@@ -18,7 +18,7 @@ input {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
-    width: 400px;
+    width: auto;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 9999;
