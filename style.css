@@ -14,34 +14,37 @@ input {
 .popup {
     display: none;
     position: fixed;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
-    width: 300px;
+    width: 400px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 9999;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 20px;
 }
 
 .popup-content {
     position: relative;
+  
 }
 
 .popup-close {
     position: absolute;
     top: -30px;
     right: -8px;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
-    color: #fe27f3;
+    color: #27defe;
+  
 }
 
 .popup-message {
     margin: 20px 0;
+   
 }
 
 /* Styling for success and access denied messages */
