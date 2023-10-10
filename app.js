@@ -116,7 +116,7 @@ loginForm.addEventListener("submit", (event) => {
   // Automatically hide the popup after 3 seconds
   setTimeout(() => {
     hideMessage();
-  }, 99000); // 3000 milliseconds = 3 seconds
+  }, 152000); // 3000 milliseconds = 3 seconds
 });
 
 popupClose.addEventListener("click", () => {
