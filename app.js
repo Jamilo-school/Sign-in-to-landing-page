@@ -79,6 +79,8 @@ const passwordInput = loginForm.querySelector("input[type='password']");
 const popup = document.getElementById("popup");
 const popupMessage = document.getElementById("popup-message");
 const popupClose = document.getElementById("popup-close");
+const successSound = document.getElementById("successSound");
+const errorSound = document.getElementById("errorSound");
 
 loginForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -94,28 +96,39 @@ loginForm.addEventListener("submit", (event) => {
     const name = isValidCredential.name;
     const subjects = isValidCredential.subjects.join(", ");
     const greeting = `🧑‍⚕️ Welcome ${name} ${subjects}. `;
+    
+    // Play the success sound
+    successSound.play();
+    
+    // Show the success message
     showMessage(greeting, "success");
-
-    // Delay for 3 seconds before redirecting
+    // Redirect to www.google.com after 3 seconds
     setTimeout(() => {
       window.location.href = "https://jamilo-school.github.io/landing-page/";
-    }, 3000); // 3000 milliseconds = 3 seconds
+    }, 29000); // 3000 milliseconds = 3 seconds
   } else {
+    // Play the error sound
+    errorSound.play();
+    
     showMessage("🎯 Access denied! You are trying to use unauthorized credentials. Please check and try again ", "access-denied");
   }
+
+  // Automatically hide the popup after 3 seconds
+  setTimeout(() => {
+    hideMessage();
+  }, 27000); // 3000 milliseconds = 3 seconds
 });
 
 popupClose.addEventListener("click", () => {
-    popup.style.display = "none";
+    hideMessage();
 });
 
 function showMessage(message, messageType) {
     popupMessage.textContent = message;
     popup.className = "popup " + messageType;
     popup.style.display = "block";
+}
 
-    // Close the popup after 3 seconds
-    setTimeout(() => {
-      popup.style.display = "none";
-    }, 3000); // 3000 milliseconds = 3 seconds
+function hideMessage() {
+    popup.style.display = "none";
 }

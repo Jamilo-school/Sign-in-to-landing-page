@@ -23,7 +23,7 @@ input {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 9999;
     text-align: center;
-    color: #115d4e;
+    color: #fff;
     padding: 20px;
 }
 
@@ -49,13 +49,16 @@ input {
 
 /* Styling for success and access denied messages */
 .success {
-  background-image: linear-gradient(-45deg, #cfb150 0%, #0432fe 100%);
-  font-family: monospace;
+  color: #115d4e;
+ background-color: #D1FAE5;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .access-denied {
   background-color:#f1f8fc;
-    font-family: monospace;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #899;
+ 
 }
 /* ////////////////////////// */
 .logo{
