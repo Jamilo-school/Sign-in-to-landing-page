@@ -105,7 +105,7 @@ loginForm.addEventListener("submit", (event) => {
     // Redirect to www.google.com after 3 seconds
     setTimeout(() => {
       window.location.href = "https://jamilo-school.github.io/landing-page/";
-    }, 3000); // 3000 milliseconds = 3 seconds
+    }, 173000); // 3000 milliseconds = 3 seconds
   } else {
     // Play the error sound
     errorSound.play();
@@ -116,7 +116,7 @@ loginForm.addEventListener("submit", (event) => {
   // Automatically hide the popup after 3 seconds
   setTimeout(() => {
     hideMessage();
-  }, 3000); // 3000 milliseconds = 3 seconds
+  }, 172000); // 3000 milliseconds = 3 seconds
 });
 
 popupClose.addEventListener("click", () => {
