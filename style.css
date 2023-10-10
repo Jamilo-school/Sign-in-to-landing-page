@@ -18,12 +18,12 @@ input {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
-    width: 400px;
+    width: 300px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 9999;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: #115d4e;
     padding: 20px;
 }
 
@@ -54,7 +54,7 @@ input {
 }
 
 .access-denied {
-    background-image: linear-gradient(-45deg, #a95d5d 0%, #fe0453 100%);
+  background-color:#f1f8fc;
     font-family: monospace;
 }
 /* ////////////////////////// */
@@ -138,7 +138,7 @@ form.sign-in-form {
 .input-field {
   max-width: 380px;
   width: 100%;
-  background-color: #f0f0f0;
+  background-color: #fafafa;
   margin: 10px 0;
   height: 55px;
   border-radius: 55px;
@@ -151,7 +151,7 @@ form.sign-in-form {
 .input-field i {
   text-align: center;
   line-height: 55px;
-  color: #acacac;
+  color: #0d5f9a;
   transition: 0.5s;
   font-size: 1.1rem;
 }
@@ -163,11 +163,11 @@ form.sign-in-form {
   line-height: 1;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #333;
+  color: #333333;
 }
 
 .input-field input::placeholder {
-  color: #aaa;
+  color: #cfd8dc;
   font-weight: 500;
  
 }
@@ -1324,8 +1324,8 @@ container {
 @-webkit-keyframes text-animation76 {
   0% {
     -webkit-clip-path: inset(0 100% 0 0);
-            clip-path: inset(0 100% 0 0);
+    clip-path: inset(0 100% 0 0);
   }
-
 }
+
 /* searching ends///////////////////////////////////// */
