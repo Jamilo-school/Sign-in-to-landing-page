@@ -156,6 +156,7 @@ form.sign-in-form {
   font-size: 1.1rem;
 }
 
+
 .input-field input {
   background: none;
   outline: none;
@@ -163,7 +164,8 @@ form.sign-in-form {
   line-height: 1;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #333333;
+  color: #c8c7c7;
+  font-family: monospace;
 }
 
 .input-field input::placeholder {
