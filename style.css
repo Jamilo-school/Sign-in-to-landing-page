@@ -18,7 +18,7 @@ input {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
-    width: auto;
+    width: 400px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 9999;
@@ -36,9 +36,9 @@ input {
     position: absolute;
     top: -30px;
     right: -8px;
-    font-size: 30px;
+    font-size: 0px;
     cursor: pointer;
-    color: #27defe;
+    color: #fe27f3;
   
 }
 

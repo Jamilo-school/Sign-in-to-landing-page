@@ -95,9 +95,13 @@ loginForm.addEventListener("submit", (event) => {
     const subjects = isValidCredential.subjects.join(", ");
     const greeting = `🧑‍⚕️ Welcome ${name} ${subjects}. `;
     showMessage(greeting, "success");
-    window.location.href = "https://jamilo-school.github.io/landing-page/";
+
+    // Delay for 3 seconds before redirecting
+    setTimeout(() => {
+      window.location.href = "https://jamilo-school.github.io/landing-page/";
+    }, 3000); // 3000 milliseconds = 3 seconds
   } else {
-    showMessage("🧑‍⚕️Access denied! You are trying to use unauthorized credentials. Please check and try again ", "access-denied");
+    showMessage("🎯 Access denied! You are trying to use unauthorized credentials. Please check and try again ", "access-denied");
   }
 });
 
@@ -109,4 +113,9 @@ function showMessage(message, messageType) {
     popupMessage.textContent = message;
     popup.className = "popup " + messageType;
     popup.style.display = "block";
+
+    // Close the popup after 3 seconds
+    setTimeout(() => {
+      popup.style.display = "none";
+    }, 3000); // 3000 milliseconds = 3 seconds
 }
