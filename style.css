@@ -154,6 +154,9 @@ form.sign-in-form {
   color: #0d5f9a;
   transition: 0.5s;
   font-size: 1.1rem;
+
+ 
+  
 }
 
 
@@ -165,12 +168,15 @@ form.sign-in-form {
   font-weight: 600;
   font-size: 1.1rem;
   color: #c8c7c7;
-  font-family: monospace;
+  
+  
+ 
 }
 
 .input-field input::placeholder {
   color: #cfd8dc;
   font-weight: 500;
+  
  
 }
 
