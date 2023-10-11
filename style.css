@@ -13,8 +13,8 @@ input {
 .loader {
   display: block;
   --height-of-loader: 4px;
-  --loader-color: #0071e2;
-  width: 130px;
+  --loader-color:  #140aa0;;
+  width: 240px;
   height: var(--height-of-loader);
   border-radius: 30px;
   background-color: rgba(0,0,0,0.2);
@@ -84,15 +84,15 @@ input {
 
 /* Styling for success and access denied messages */
 .success {
-  color: #115d4e;
- background-color: #D1FAE5;
+  color: #000000;
+  background-image: linear-gradient(-45deg,  #19ffbe 0%, #073d2f 100%);
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .access-denied {
-  background-color:#f1f8fc;
+  background-image: linear-gradient(-45deg,  #0c083e 0%, #04befe 100%);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #899;
+    color:#ffff;
  
 }
 /* ////////////////////////// */
@@ -107,7 +107,7 @@ input {
   border: transparent;
   padding: 10px;
   border-radius: 10px;
-  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  background-image: linear-gradient(-45deg,  #140aa0 0%, #04befe 100%);
 }
 .container {
   position: relative;
@@ -176,7 +176,7 @@ form.sign-in-form {
 .input-field {
   max-width: 380px;
   width: 100%;
-  background-color: #fafafa;
+  background-color:  #140aa0;
   margin: 10px 0;
   height: 55px;
   border-radius: 55px;
@@ -185,12 +185,13 @@ form.sign-in-form {
   padding: 0 0.4rem;
   position: relative;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  
 }
 
 .input-field i {
   text-align: center;
   line-height: 55px;
-  color: #0d5f9a;
+  color: #ffff;
   transition: 0.5s;
   font-size: 1.1rem;
 
@@ -253,7 +254,7 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-  background-color: #5995fd;
+  background-color: #140aa0;;
   border: none;
   outline: none;
   height: 49px;
@@ -287,7 +288,7 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  background-image: linear-gradient(-45deg,  #140aa0 0%, #04befe 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -1092,9 +1093,9 @@ container {
 /* sersching  starts//////////////////////////////////// */
 #wifi-loader {
   --background: #62abff;
-  --front-color: #c5c5c5;
+  --front-color: #140aa0;;
   --back-color: #dee0ea;
-  --text-color: #49f6ff;
+  --text-color: #ff1313;
   width: 174px;
   height: 64px;
   border-radius: 50px;
