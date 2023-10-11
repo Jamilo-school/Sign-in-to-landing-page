@@ -176,7 +176,7 @@ form.sign-in-form {
 .input-field {
   max-width: 380px;
   width: 100%;
-  background-color: #fafafa;
+  background-color:  #140aa0;
   margin: 10px 0;
   height: 55px;
   border-radius: 55px;
@@ -190,7 +190,7 @@ form.sign-in-form {
 .input-field i {
   text-align: center;
   line-height: 55px;
-  color: #0d5f9a;
+  color: #fff;
   transition: 0.5s;
   font-size: 1.1rem;
 
@@ -253,13 +253,12 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-  background-color: #5995fd;
+  background-color: #140aa0;
   border: none;
   outline: none;
   height: 49px;
   border-radius: 49px;
   color: #fff;
-  text-transform: uppercase;
   font-weight: 600;
   margin: 10px 0;
   cursor: pointer;
@@ -267,7 +266,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: #4d84e2;
+  background-color: red;
 }
 .panels-container {
   position: absolute;
@@ -287,7 +286,7 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  background-image: linear-gradient(-45deg, #140aa0 0%, #0419fe 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -441,7 +440,7 @@ container {
   width: 45px;
   height: 45px;
   border-radius: 50% 50% 50% 0%;
-  background-color: #4c9beb;
+  background-color:   #140aa0;
   display: inline-block;
   margin-left: -25px;
   z-index: 5;
@@ -451,7 +450,7 @@ container {
   width: 65px;
   height: 65px;
   border-radius: 50% 50% 0% 50%;
-  background-color: #4c9beb;
+  background-color:  #140aa0;
   display: inline-block;
   z-index: 5;
 }
@@ -460,7 +459,7 @@ container {
   width: 50px;
   height: 50px;
   border-radius: 50% 50% 50% 0%;
-  background-color: #4c9beb;
+  background-color: #140aa0;
   display: inline-block;
   margin-left: -20px;
   z-index: 5;
@@ -470,7 +469,7 @@ container {
   width: 30px;
   height: 30px;
   border-radius: 50% 50% 0% 50%;
-  background-color: #4c9beb;
+  background-color:  #140aa0;
   display: inline-block;
   z-index: 5;
 }
