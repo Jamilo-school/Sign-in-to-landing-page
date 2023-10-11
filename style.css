@@ -13,7 +13,7 @@ input {
 .loader {
   display: block;
   --height-of-loader: 4px;
-  --loader-color: #0071e2;
+  --loader-color:  #140aa0;
   width: 130px;
   height: var(--height-of-loader);
   border-radius: 30px;
@@ -107,7 +107,7 @@ input {
   border: transparent;
   padding: 10px;
   border-radius: 10px;
-  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  background-image: linear-gradient(-45deg,  #140aa0 0%,  #140aa0 100%);
 }
 .container {
   position: relative;
@@ -118,12 +118,12 @@ input {
 }
 
 .social-icon:hover{
-  background-color: black;
+  background-color:  #140aa0;
 
 
 }
 .fab{
-  color:  #64bcf4;;
+  color:   #140aa0;
 }
 
 .forms-container {
@@ -555,13 +555,13 @@ container {
 /* ///////////////////////////////////////////////////////////////// */
 
 .typewriter {
-  --blue: #5C86FF;
+  --blue: #140aa0;
   --blue-dark: #275EFE;
   --key: #fff;
   --paper: #EEF0FD;
   --text: #D3D4EC;
   --tool: #FBC56C;
-  --duration: 3s;
+  --duration: 1s;
   position: relative;
   -webkit-animation: bounce05 var(--duration) linear infinite;
   animation: bounce05 var(--duration) linear infinite;
@@ -1091,9 +1091,9 @@ container {
 /* sersching  starts//////////////////////////////////// */
 #wifi-loader {
   --background: #62abff;
-  --front-color: #c5c5c5;
+  --front-color: #140aa0;
   --back-color: #dee0ea;
-  --text-color: #49f6ff;
+  --text-color: #140aa0;
   width: 174px;
   height: 64px;
   border-radius: 50px;
