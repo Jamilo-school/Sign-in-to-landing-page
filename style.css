@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+#logo{
+  width: 190px;
+  position: absolute;
+  left: 20px;
+  top:53px;
+  background-attachment: red;
+}
+
 body,
 input {
   font-family: "Poppins", sans-serif;
@@ -169,7 +177,7 @@ form.sign-in-form {
 
 .title {
   font-size: 2.2rem;
-  color: #444;
+  color: #140aa0;
   margin-bottom: 10px;
 }
 
@@ -206,7 +214,7 @@ form.sign-in-form {
   line-height: 1;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #c8c7c7;
+  color: #ffff;
   
   
   
@@ -214,7 +222,7 @@ form.sign-in-form {
 }
 
 .input-field input::placeholder {
-  color: #cfd8dc;
+  color: #fff;
   font-weight: 500;
   
  
@@ -321,6 +329,12 @@ form.sign-in-form {
   color: #fff;
   transition: transform 0.9s ease-in-out;
   transition-delay: 0.6s;
+}
+.teachers{
+  background: linear-gradient(45deg,#0de5da,#5b0e43,#c2b41b,#000000);
+  -webkit-background-clip: text;
+  background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .panel h3 {
@@ -963,6 +977,12 @@ container {
     min-height: 800px;
     height: 100vh;
   }
+  #logo{
+    width: 140px;
+    top: 200px;
+    left: 120px;
+  }
+  
   .signin-signup {
     width: 100%;
     top: 95%;
