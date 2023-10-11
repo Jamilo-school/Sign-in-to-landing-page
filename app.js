@@ -110,7 +110,7 @@ loginForm.addEventListener("submit", (event) => {
     // Play the error sound
     errorSound.play();
     
-    showMessage("🎯 Access denied! You are trying to use unauthorized credentials. Please check and try again ", "access-denied");
+    showMessage("🎯 Access denied! You are trying to use unauthorized credentials. Please check and try again.Kindly wait.We wiil be done in 3 mins ", "access-denied");
   }
 
   // Automatically hide the popup after 3 seconds
