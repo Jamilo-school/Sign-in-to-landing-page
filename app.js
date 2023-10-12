@@ -105,18 +105,18 @@ loginForm.addEventListener("submit", (event) => {
     // Redirect to www.google.com after 3 seconds
     setTimeout(() => {
       window.location.href = "https://jamilo-school.github.io/landing-page/";
-    }, 173000); // 3000 milliseconds = 3 seconds
+    }, 3000); // 3000 milliseconds = 3 seconds
   } else {
     // Play the error sound
     errorSound.play();
     
-    showMessage("🎯 Access denied! You are trying to use unauthorized credentials. Please check and try again ", "access-denied");
+    showMessage("🎯 Access denied! You are trying to use unauthorized credentials. Please check and try again.Kindly wait.We will be done in 3 mins ", "access-denied");
   }
 
   // Automatically hide the popup after 3 seconds
   setTimeout(() => {
     hideMessage();
-  }, 172000); // 3000 milliseconds = 3 seconds
+  }, 3000); // 3000 milliseconds = 3 seconds
 });
 
 popupClose.addEventListener("click", () => {
