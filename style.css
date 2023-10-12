@@ -272,7 +272,12 @@ form.sign-in-form {
   cursor: pointer;
   transition: 0.5s;
 }
-
+video{
+  height: 200px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
 .btn:hover {
   background-color: red;
 }
