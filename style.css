@@ -116,7 +116,7 @@ background-image: url(./img/Background.png);
   border: transparent;
   padding: 10px;
   border-radius: 10px;
-  background-image: linear-gradient(-45deg,   #060b3b 0%,  #140aa0 100%);
+  background-image: linear-gradient(-45deg,   #060b3b 0%,  #060b3b 100%);
 }
 .container {
   position: relative;
@@ -127,12 +127,12 @@ background-image: url(./img/Background.png);
 }
 
 .social-icon:hover{
-  background-color:  #140aa0;
+  background-color:  #060b3b;
 
 
 }
 .fab{
-  color:   #140aa0;
+  color:   #060b3b;
 }
 
 .forms-container {
@@ -579,8 +579,8 @@ container {
 /* ///////////////////////////////////////////////////////////////// */
 
 .typewriter {
-  --blue: #140aa0;
-  --blue-dark: #275EFE;
+  --blue: #060b3b;
+  --blue-dark: #060b3b;
   --key: #fff;
   --paper: #EEF0FD;
   --text: #D3D4EC;
@@ -1121,9 +1121,9 @@ container {
 /* sersching  starts//////////////////////////////////// */
 #wifi-loader {
   --background: #62abff;
-  --front-color: #140aa0;
+  --front-color: #060b3b;
   --back-color: #dee0ea;
-  --text-color: #140aa0;
+  --text-color: #060b3b;
   width: 174px;
   height: 64px;
   border-radius: 50px;
