@@ -163,7 +163,7 @@ function updateDateAndTime() {
 
   dayElement.textContent = dayOfWeek;
   dateElement.textContent = `${month} ${day}, ${year}`;
-  timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+  timeElement.textContent = `${hours}hr : ${minutes}min : ${seconds}sec`;
 }
 
 updateDateAndTime(); // Initial call to display the date and time
