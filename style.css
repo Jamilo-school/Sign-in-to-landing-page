@@ -21,7 +21,7 @@ input {
 .loader {
   display: block;
   --height-of-loader: 4px;
-  --loader-color:  #140aa0;
+  --loader-color:  #060b3b;
   width: 130px;
   height: var(--height-of-loader);
   border-radius: 30px;
@@ -60,7 +60,7 @@ input {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(246, 23, 23, 0.8);
     width: 300px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -92,15 +92,16 @@ input {
 
 /* Styling for success and access denied messages */
 .success {
-  color: #000000;
-  background-image: linear-gradient(-45deg,  #19ffbe 0%, #073d2f 100%);
+  color: #060b3b;
+background-image: url(./img/Background.png);
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .access-denied {
-  background-image: linear-gradient(-45deg,  #0c083e 0%, #04befe 100%);
+  color: #060b3b;
+background-image: url(./img/Background.png);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:#ffff;
+   
  
 }
 /* ////////////////////////// */
@@ -115,7 +116,7 @@ input {
   border: transparent;
   padding: 10px;
   border-radius: 10px;
-  background-image: linear-gradient(-45deg,  #140aa0 0%,  #140aa0 100%);
+  background-image: linear-gradient(-45deg,   #060b3b 0%,  #140aa0 100%);
 }
 .container {
   position: relative;
@@ -177,14 +178,15 @@ form.sign-in-form {
 
 .title {
   font-size: 2.2rem;
-  color: #140aa0;
+  color: #060b3b;
   margin-bottom: 10px;
 }
 
 .input-field {
   max-width: 380px;
   width: 100%;
-  background-color:  #140aa0;
+    color: #ffffff;
+    background-color:  #060b3b;
   margin: 10px 0;
   height: 55px;
   border-radius: 55px;
@@ -199,7 +201,7 @@ form.sign-in-form {
 .input-field i {
   text-align: center;
   line-height: 55px;
-  color: #fff;
+  color: #ffffff;
   transition: 0.5s;
   font-size: 1.1rem;
 
@@ -215,7 +217,7 @@ form.sign-in-form {
   line-height: 1;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #ffff;
+  color: #ffffff;
   
   
   
@@ -262,7 +264,7 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-  background-color: #140aa0;
+  background-color:  #060b3b;
   border: none;
   outline: none;
   height: 49px;
@@ -300,7 +302,7 @@ video{
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #140aa0 0%, #0419fe 100%);
+  background-image: linear-gradient(-45deg,  #060b3b 0%,  #0c177b 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -337,10 +339,12 @@ video{
   transition-delay: 0.6s;
 }
 .teachers{
-  background: linear-gradient(45deg,#0de5da,#5b0e43,#c2b41b,#000000);
-  -webkit-background-clip: text;
-  background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background-color:  #060b3b;
+  border-radius: 20px;
+  color: #ffff;
+  padding: 20px;
+  margin-left: 29px;
+ 
 }
 
 .panel h3 {
@@ -460,7 +464,7 @@ container {
   width: 45px;
   height: 45px;
   border-radius: 50% 50% 50% 0%;
-  background-color:   #140aa0;
+  background-color:   #060b3b;
   display: inline-block;
   margin-left: -25px;
   z-index: 5;
@@ -470,7 +474,7 @@ container {
   width: 65px;
   height: 65px;
   border-radius: 50% 50% 0% 50%;
-  background-color:  #140aa0;
+  background-color:  #060b3b;
   display: inline-block;
   z-index: 5;
 }
@@ -479,7 +483,7 @@ container {
   width: 50px;
   height: 50px;
   border-radius: 50% 50% 50% 0%;
-  background-color: #140aa0;
+  background-color: #060b3b;
   display: inline-block;
   margin-left: -20px;
   z-index: 5;
@@ -489,7 +493,7 @@ container {
   width: 30px;
   height: 30px;
   border-radius: 50% 50% 0% 50%;
-  background-color:  #140aa0;
+  background-color:  #060b3b;
   display: inline-block;
   z-index: 5;
 }
