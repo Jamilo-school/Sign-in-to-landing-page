@@ -132,3 +132,41 @@ function showMessage(message, messageType) {
 function hideMessage() {
     popup.style.display = "none";
 }
+
+
+
+
+
+
+function updateDateAndTime() {
+  const daysOfWeek = [
+    "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+  ];
+
+  const months = [
+    "January", "February", "March", "April", "May", "June", "July", "August",
+    "September", "October", "November", "December"
+  ];
+
+  const now = new Date();
+  const dayOfWeek = daysOfWeek[now.getDay()];
+  const month = months[now.getMonth()];
+  const day = now.getDate();
+  const year = now.getFullYear();
+  const hours = now.getHours().toString().padStart(2, '0');
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  const seconds = now.getSeconds().toString().padStart(2, '0');
+
+  const dayElement = document.getElementById("day");
+  const dateElement = document.getElementById("date");
+  const timeElement = document.getElementById("time");
+
+  dayElement.textContent = dayOfWeek;
+  dateElement.textContent = `${month} ${day}, ${year}`;
+  timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+}
+
+updateDateAndTime(); // Initial call to display the date and time
+
+// Update the date and time every second
+setInterval(updateDateAndTime, 1000);
