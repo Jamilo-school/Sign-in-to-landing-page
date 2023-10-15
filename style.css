@@ -281,9 +281,7 @@ video{
   top: 30px;
   right: 20px;
 }
-.btn:hover {
-  background-color: red;
-}
+
 .panels-container {
   position: absolute;
   height: 100%;
