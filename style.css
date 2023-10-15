@@ -1114,6 +1114,14 @@ container {
   form {
     padding: 0 1.5rem;
   }
+  #logo{
+    width: 100px;
+    position: absolute;
+    left: 35%;
+    top:163px;
+    height: 70px;
+   
+  }
 
   .image {
     display: none;
