@@ -72,7 +72,7 @@ const validCredentials = [
   { username: "caren@jamiloschool", password: "z299y", name: "Clarance Jumba", subjects: [" and trainer of Drama", "social culture"] },
   { username: "mwasame@jamiloschool", password: "gnome", name: "Madam Mwasame Juliet ", subjects: ["Social sciences", "Peer conselor"] },
   { username: "Grace@jamiloschool", password: "phomes", name: "Madam Grace Obilo ", subjects: ["Mathematics", "English"] },
-  { username: "linet@jamiloschool", password: "radido", name: "Madam linet Radido ", subjects: ["Registrar", "Academics"] },
+  { username: "linet@jamiloschool", password: "radido", name: "Madam Grace Obilo ", subjects: ["Mathematics", "English"] },
 ];
 const loginForm = document.querySelector(".sign-in-form");
 const usernameInput = loginForm.querySelector("input[type='text']");
