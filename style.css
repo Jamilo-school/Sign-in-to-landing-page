@@ -262,7 +262,6 @@ div:where(.swal2-container) div:where(.swal2-popup) {
   display: grid;
   grid-template-columns: repeat(1,1fr);
  backdrop-filter: blur(500px);
- border: 2px solid;
  border-radius: 10px;
 
 }
