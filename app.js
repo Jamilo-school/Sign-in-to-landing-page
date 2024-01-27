@@ -1,174 +1,77 @@
-const sign_in_btn = document.querySelector("#sign-in-btn");
-const sign_up_btn = document.querySelector("#sign-up-btn");
-const container = document.querySelector(".container");
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzbEZSEARSZNsV6mIihKO5t6Ld9Jo9DTpEqigFWQbms_HptG4pVKrzRk8w48pmV5s4s3g/exec';
+const form = document.forms['submit-to-google-sheet'];
 
-sign_up_btn.addEventListener("click", () => {
-  container.classList.add("sign-up-mode");
+const passwordRedirectMap = {
+    'pass': './redirect1.html',
+    'pass2': './redirect2.html',
+    'password3': './redirect3.html',
+    // Add more mappings as needed
+};
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Prompt for password
+    const { value: password } = await Swal.fire({
+        title: 'Enter Password',
+        input: 'password',
+        showCancelButton: true,
+        inputValidator: (value) => {
+            if (!value) {
+                return 'Password is required!';
+            } else {
+                // Check if the entered password is in the passwordRedirectMap
+                if (!passwordRedirectMap.hasOwnProperty(value)) {
+                    Swal.fire({
+                        title: 'Incorrect Password',
+                        text: 'Please enter a valid password.',
+                        icon: 'warning',
+                    });
+                    return ''; // Reject the input
+                }
+            }
+        },
+    });
+
+    if (password) {
+        Swal.fire({
+            title: 'Submitting...',
+            text: 'Please wait',
+            icon: 'info',
+            showConfirmButton: false,
+            allowOutsideClick: false,
+        });
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then((response) => {
+                Swal.close();
+                if (response.status === 200) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Submission Successful!',
+                        icon: 'success',
+                    });
+                    form.reset();
+                    setTimeout(() => {
+                        Swal.close();
+                        window.location.href = passwordRedirectMap[password];
+                    }, 2000);
+                } else {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Submission Failed',
+                        icon: 'error',
+                    });
+                }
+            })
+            .catch((error) => {
+                console.error('Error!', error.message);
+                Swal.close();
+                Swal.fire({
+                    title: 'Ooops!!',
+                    text: 'Connect to the internet ',
+                    icon: 'error',
+                });
+            });
+    }
 });
-
-sign_in_btn.addEventListener("click", () => {
-  container.classList.remove("sign-up-mode");
-});
-
-
-
-
-
-
-
-window.alertComponent = function () {
-  return {
-    openAlertBox: false,
-    alertBackgroundColor: '',
-    alertMessage: '',
-    showAlert(type) {
-      this.openAlertBox = true
-      switch (type) {
-        case 'success':
-          this.alertBackgroundColor = 'bg-green-500'
-          this.alertMessage = `${this.successIcon} ${this.defaultSuccessMessage}`
-          break
-        case 'info':
-          this.alertBackgroundColor = 'bg-blue-500'
-          this.alertMessage = `${this.infoIcon} ${this.defaultInfoMessage}`
-          break
-        case 'warning':
-          this.alertBackgroundColor = 'bg-yellow-500'
-          this.alertMessage = `${this.warningIcon} ${this.defaultWarningMessage}`
-          break
-        case 'danger':
-          this.alertBackgroundColor = 'bg-red-500'
-          this.alertMessage = `${this.dangerIcon} ${this.defaultDangerMessage}`
-          break
-      }
-      this.openAlertBox = true
-    },
-    successIcon: `<svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 mr-2 text-white"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`,
-    infoIcon: `<svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 mr-2 text-white"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`,
-    warningIcon: `<svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 mr-2 text-white"><path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`,
-    dangerIcon: `<svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 mr-2 text-white"><path d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>`,
-    defaultInfoMessage: `This alert contains info message.`,
-    defaultSuccessMessage: `This alert contains success message.`,
-    defaultWarningMessage: `This alert contains warning message.`,
-    defaultDangerMessage: `This alert contains danger message.`,
-  }
-}
-
-
-
-
-
-
-
-const validCredentials = [
-  { username: "geofreyonyango167@gmail.com", password: "montanaio", name: "Headteacher Mr Oduor Geofrey Onyango", subjects: ["Teacher of Mathematics", "I.C.T and Science"] },
-  { username: "lencer07achieng@gmail.com", password: "33387882", name: "Madam Lencer Seje", subjects: ["Teacher of English", "Mathematics"] },
-  { username: "apiyoteresa@gmail.com", password: "31502613", name: "Madam Teresa Apiyo Ombwayo", subjects: ["Teacher of Mathematics", "Kiswahili"] },
-  { username: "calvin@jamiloschool", password: "ict46892x", name: "Deputy Headteacher Calvin Ochieng", subjects: ["science", "music"] },
-  { username: "clarancejumba@gmail.com", password: "clarance", name: "Clarance Jumba", subjects: ["agriculture", "Art/craft"] },
-  { username: "nancy@jamiloschool", password: "8299y", name: "Nancy Atieno", subjects: ["music", "Drama"] },
-  { username: "director@jamiloschool", password: "G967785", name: "Director Lilian Oraro Omollo",subjects: [""] },
-  { username: "director@jamiloschool", password: "G##56", name: "Director Gerald Omollo",subjects: [""]},
-  { username: "caren@jamiloschool", password: "z299y", name: "Clarance Jumba", subjects: [" and trainer of Drama", "social culture"] },
-  { username: "mwasame@jamiloschool", password: "gnome", name: "Madam Mwasame Juliet ", subjects: ["Social sciences", "Peer conselor"] },
-  { username: "Grace@jamiloschool", password: "phomes", name: "Madam Grace Obilo ", subjects: ["Mathematics", "English"] },
-  { username: "linet@jamiloschool", password: "radido", name: "Madam Grace Obilo ", subjects: ["Mathematics", "English"] },
-];
-const loginForm = document.querySelector(".sign-in-form");
-const usernameInput = loginForm.querySelector("input[type='text']");
-const passwordInput = loginForm.querySelector("input[type='password']");
-
-const popup = document.getElementById("popup");
-const popupMessage = document.getElementById("popup-message");
-const popupClose = document.getElementById("popup-close");
-const successSound = document.getElementById("successSound");
-const errorSound = document.getElementById("errorSound");
-
-loginForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const username = usernameInput.value;
-  const password = passwordInput.value;
-
-  const isValidCredential = validCredentials.find(
-    (credential) => credential.username === username && credential.password === password
-  );
-
-  if (isValidCredential) {
-    const name = isValidCredential.name;
-    const subjects = isValidCredential.subjects.join(", ");
-    const greeting = `🧑‍⚕️ Welcome ${name} ${subjects}. `;
-    
-    // Play the success sound
-    successSound.play();
-    
-    // Show the success message
-    showMessage(greeting, "success");
-    // Redirect to www.google.com after 3 seconds
-    setTimeout(() => {
-      window.location.href = "https://jamilo-school.github.io/landing-page/";
-    }, 8000); // 3000 milliseconds = 3 seconds
-  } else {
-    // Play the error sound
-    errorSound.play();
-    
-    showMessage("🎯 Access denied! You are trying to use unauthorized credentials. Please check and try again.Kindly wait.We will be done in 3 mins ", "access-denied");
-  }
-
-  // Automatically hide the popup after 3 seconds
-  setTimeout(() => {
-    hideMessage();
-  }, 7000); // 3000 milliseconds = 3 seconds
-});
-
-popupClose.addEventListener("click", () => {
-    hideMessage();
-});
-
-function showMessage(message, messageType) {
-    popupMessage.textContent = message;
-    popup.className = "popup " + messageType;
-    popup.style.display = "block";
-}
-
-function hideMessage() {
-    popup.style.display = "none";
-}
-
-
-
-
-
-
-function updateDateAndTime() {
-  const daysOfWeek = [
-    "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
-  ];
-
-  const months = [
-    "January", "February", "March", "April", "May", "June", "July", "August",
-    "September", "October", "November", "December"
-  ];
-
-  const now = new Date();
-  const dayOfWeek = daysOfWeek[now.getDay()];
-  const month = months[now.getMonth()];
-  const day = now.getDate();
-  const year = now.getFullYear();
-  const hours = now.getHours().toString().padStart(2, '0');
-  const minutes = now.getMinutes().toString().padStart(2, '0');
-  const seconds = now.getSeconds().toString().padStart(2, '0');
-
-  const dayElement = document.getElementById("day");
-  const dateElement = document.getElementById("date");
-  const timeElement = document.getElementById("time");
-
-  dayElement.textContent = dayOfWeek;
-  dateElement.textContent = `${month} ${day}, ${year}`;
-  timeElement.textContent = `${hours}hr : ${minutes}min : ${seconds}sec`;
-}
-
-updateDateAndTime(); // Initial call to display the date and time
-
-// Update the date and time every second
-setInterval(updateDateAndTime, 1000);
