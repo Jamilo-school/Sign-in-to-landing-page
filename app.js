@@ -13,7 +13,7 @@ form.addEventListener('submit', async (e) => {
 
     // Prompt for password
     const { value: password } = await Swal.fire({
-        title: 'Enter Password',
+        title: 'Enter Activation Lincence Key',
         input: 'password',
         showCancelButton: true,
         inputValidator: (value) => {
