@@ -264,7 +264,7 @@ div:where(.swal2-container) div:where(.swal2-popup) {
  backdrop-filter: blur(500px);
  border: 2px solid;
  border-radius: 10px;
- border-color: rgb(231, 227, 227);
+
 }
 .container02{
 margin-top: 70px;
