@@ -13,7 +13,7 @@ form.addEventListener('submit', async (e) => {
 
     // Prompt for password
     const { value: password } = await Swal.fire({
-        title: 'Enter Activation Lincence Key',
+        title: 'Digital Activation License Key Required',
         input: 'password',
         showCancelButton: true,
         inputValidator: (value) => {
@@ -23,8 +23,8 @@ form.addEventListener('submit', async (e) => {
                 // Check if the entered password is in the passwordRedirectMap
                 if (!passwordRedirectMap.hasOwnProperty(value)) {
                     Swal.fire({
-                        title: 'Incorrect Password',
-                        text: 'Please enter a valid password.',
+                        title: 'Incorrect Activation License Key',
+                        text: 'Please enter a valid key or contact.',
                         icon: 'warning',
                     });
                     return ''; // Reject the input

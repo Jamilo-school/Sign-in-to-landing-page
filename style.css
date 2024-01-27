@@ -316,6 +316,7 @@ transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
 
 label,details{
+
   margin-left: 20px;
   background: linear-gradient(45deg,#8c9393,#000000,#f11b5f,#17174f);
 -webkit-background-clip: text;
@@ -340,6 +341,7 @@ option{
   border: none;
   font-family: 'Times New Roman', Times, serif;
   color: #fff;
+  text-align: left;
   
 }
 .input.submit:hover{
