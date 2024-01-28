@@ -2,7 +2,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbzbEZSEARSZNsV6mIihKO
 const form = document.forms['submit-to-google-sheet'];
 
 const passwordRedirectMap = {
-    'pass': './redirect1.html',
+    'pass': 'https://jamilo-school.github.io/landing-page/',
     'pass2': './redirect2.html',
     'password3': './redirect3.html',
     // Add more mappings as needed
@@ -35,7 +35,7 @@ form.addEventListener('submit', async (e) => {
 
     if (password) {
         Swal.fire({
-            title: 'Submitting...',
+            title: 'Processing',
             text: 'Please wait',
             icon: 'info',
             showConfirmButton: false,
@@ -48,7 +48,7 @@ form.addEventListener('submit', async (e) => {
                 if (response.status === 200) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Submission Successful!',
+                        text: 'Welcome Successful!',
                         icon: 'success',
                     });
                     form.reset();
