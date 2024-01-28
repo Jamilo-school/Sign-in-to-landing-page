@@ -2,7 +2,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbzbEZSEARSZNsV6mIihKO
 const form = document.forms['submit-to-google-sheet'];
 
 const passwordRedirectMap = {
-    'pass': 'https://jamilo-school.github.io/landing-page/',
+    'admin': 'https://jamilo-school.github.io/landing-page/',
     'pass2': './redirect2.html',
     'password3': './redirect3.html',
     // Add more mappings as needed
@@ -11,54 +11,10 @@ const passwordRedirectMap = {
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Create a container element for the input and eye icons
-    const container = document.createElement('div');
-    container.style.position = 'relative';
-
-    // Create an input element
-    const inputElement = document.createElement('input');
-    inputElement.type = 'password';
-    inputElement.placeholder = 'Enter Activation License Key';
-    inputElement.classList.add('swal2-input');
-    inputElement.style.width = 'calc(90% - 40px)'; // Adjust width for icon space
-    inputElement.style.marginRight = '40px'; // Space for icons
-
-    // Create eye icons for show/hide password
-    const showPasswordIcon = document.createElement('span');
-    showPasswordIcon.innerHTML = '👁️';
-    showPasswordIcon.style.cursor = 'pointer';
-    showPasswordIcon.style.position = 'absolute';
-    showPasswordIcon.style.top = '60%';
-    showPasswordIcon.style.right = '70px';
-    showPasswordIcon.style.transform = 'translateY(-50%)';
-    showPasswordIcon.addEventListener('click', () => {
-        inputElement.type = inputElement.type === 'password' ? 'text' : 'password';
-        showPasswordIcon.style.display = 'none';
-        hidePasswordIcon.style.display = 'inline';
-    });
-
-    const hidePasswordIcon = document.createElement('span');
-    hidePasswordIcon.innerHTML = '❌';
-    hidePasswordIcon.style.cursor = 'pointer';
-    hidePasswordIcon.style.position = 'absolute';
-    hidePasswordIcon.style.top = '60%';
-    hidePasswordIcon.style.right = '70px';
-    hidePasswordIcon.style.transform = 'translateY(-50%)';
-    hidePasswordIcon.style.display = 'none';
-    hidePasswordIcon.addEventListener('click', () => {
-        inputElement.type = 'password';
-        hidePasswordIcon.style.display = 'none';
-        showPasswordIcon.style.display = 'inline';
-    });
-
-    container.appendChild(inputElement);
-    container.appendChild(showPasswordIcon);
-    container.appendChild(hidePasswordIcon);
-
     // Prompt for password
     const { value: password } = await Swal.fire({
         title: 'Digital Activation License Key Required',
-        html: container, // Use the container with input and icons
+        input: 'password',
         showCancelButton: true,
         inputValidator: (value) => {
             if (!value) {
@@ -79,7 +35,7 @@ form.addEventListener('submit', async (e) => {
 
     if (password) {
         Swal.fire({
-            title: 'Processing',
+            title: 'Submitting...',
             text: 'Please wait',
             icon: 'info',
             showConfirmButton: false,
@@ -92,7 +48,7 @@ form.addEventListener('submit', async (e) => {
                 if (response.status === 200) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Welcome Successful!',
+                        text: 'Submission Successful!',
                         icon: 'success',
                     });
                     form.reset();
