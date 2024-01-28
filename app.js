@@ -1,4 +1,4 @@
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzbEZSEARSZNsV6mIihKO5t6Ld9Jo9DTpEqigFWQbms_HptG4pVKrzRk8w48pmV5s4s3g/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzg7oOjj0KAQzGqgHFO-wKjjOQ6vjLokIxeqHBM0_FSoay3ab3PMPdDJxE2cgtefyQp/exec';
 const form = document.forms['submit-to-google-sheet'];
 
 const passwordRedirectMap = {
