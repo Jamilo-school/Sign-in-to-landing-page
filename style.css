@@ -1,6 +1,7 @@
 *{
   padding: 0;
 }
+
 .formsectionA{
   position: absolute;
   top: 1px;
@@ -182,6 +183,7 @@ body{
   background-color: transparent;
   border-radius: 20px;
 }
+
 h2#swal2-title.swal2-title{
   color: #d5cccc;
  
@@ -517,6 +519,9 @@ background-clip: text;
   margin-top: 15px;
   font-size: 1rem;
 }
+
+
+
 @media (max-width: 1216px) {
   .sections,.container02{
     display: grid;
