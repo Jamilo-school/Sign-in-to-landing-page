@@ -341,6 +341,9 @@ transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
 
 
 }
+select{
+  text-align: center;
+}
 option{
   background-color: rgb(5, 5, 60);
   border: none;
