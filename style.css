@@ -346,7 +346,7 @@ option{
   border: none;
   font-family: 'Times New Roman', Times, serif;
   color: #fff;
- 
+ text-align: center;
   
 }
 .input.submit:hover{
