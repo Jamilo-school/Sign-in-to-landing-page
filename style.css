@@ -341,15 +341,13 @@ transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
 
 
 }
-select{
-  text-align: center;
-}
+
 option{
   background-color: rgb(5, 5, 60);
   border: none;
   font-family: 'Times New Roman', Times, serif;
   color: #fff;
-
+ 
   
 }
 .input.submit:hover{
@@ -712,9 +710,11 @@ background-clip: text;
    left: -25px;
    height: 2px;
    box-shadow: none;}
-   .title {
+   #title {
     text-align: right;
+    margin-right: 4px;
    }
+   
   
   
  
