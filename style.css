@@ -411,7 +411,7 @@ Input[type=search]{
 }
 
 .input {
-  text-align: center;
+  text-align: left;
   padding: 1rem 1.2rem;
   margin: 1rem;
   border-radius: 6px;
