@@ -710,9 +710,9 @@ background-clip: text;
     top: -26px;
    left: -25px;
    height: 2px;
+   width: 15px;
    box-shadow: none;}
    #title {
-    text-align: right;
     margin-right: 4px;
    }
    
